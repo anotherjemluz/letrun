@@ -42,6 +42,10 @@ input {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 #app {
   font-family: fp-dancer-pro, sans-serif;
   font-weight: 700;

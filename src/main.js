@@ -26,8 +26,11 @@ import {
   faShoppingCart,
   faSearch,
   faArrowRight, 
-
   faArrowLeft,
+  faArrowDown,
+  faArrowUp,
+  faUserCircle,
+
   faPlus,
   faMinus,
   faEnvelope
@@ -43,8 +46,12 @@ library.add(
   faShoppingCart,
   faSearch,
   faArrowRight, 
-
   faArrowLeft, 
+  faArrowDown,
+  faArrowUp,
+  faUserCircle,
+
+
   faPlus,
   faMinus,
   faWhatsapp,
