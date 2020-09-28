@@ -1,5 +1,5 @@
-<template>
-  
+<template lang="pug">
+  h1 a
 </template>
 
 <script>
