@@ -3,7 +3,7 @@ header
   //- HEADER DESKTOP
   div.desktop-only.desktop-header
     div.first-row
-      img(src="../assets/logo.png")
+      img.logo(src="../assets/logo.png")
 
       //- left navigation
       nav.left-navigation
@@ -11,18 +11,18 @@ header
         router-link(to="/") CONTATO
         router-link(to="/") PRODUTOS
 
-      //- search bar
-      div.input-box
-        fa-icon.search-icon(icon="search")
-        input(type="text" placeholder="Pesquisar")
-        fa-icon.arrow-icon(icon="arrow-right" :class="[isActive ? 'arrow-on' : 'arrow-off']")
+        //- search bar
+        div.input-box
+          fa-icon.search-icon(icon="search")
+          input(type="text" placeholder="Pesquisar" v-model="searchText" @focus="isActive = true" @blur="isActive = false")
+          fa-icon.arrow-icon(icon="arrow-right" :class="[isActive ? 'arrow-on' : 'arrow-off']" )
 
       //- right navigation
       nav.right-navigation
         router-link(to="/c") ENTRAR #[fa-icon.user-icon(icon="user-circle")]
 
         //- cart
-        div
+        div.cart-box
           span.items-bg 
           span.items {{ itemsCount }}
           fa-icon.cart-icon(icon="shopping-cart")
@@ -46,7 +46,7 @@ header
       img.logo(src="../assets/logo.png")
 
       //- cart
-      div
+      div.cart-box
         span.items-bg 
         span.items {{ itemsCount }}
         fa-icon.cart-icon(icon="shopping-cart")
@@ -112,7 +112,7 @@ export default {
 header {
   .mobile-header {
     .first-row {
-      div {
+      .cart-box {
         .items {
           color: $white;
         }
@@ -194,6 +194,83 @@ header {
       }
     }
   }
+
+  .desktop-header {
+    .first-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .left-navigation {
+        display: flex;
+        align-items: center;
+
+        a { 
+          color: $nav-link-color; 
+          font-family: 'Baloo Tamma 2', cursive;
+        }
+
+        .input-box {
+          background-color: $search-box-color;
+
+          .search-icon {
+            color: $header-grey;
+          }
+
+          input {
+            font-family: 'Baloo Tamma 2', cursive;
+            font-weight: 400;
+            color: $header-grey;
+          }
+
+          .arrow-on {
+            background-color: $black;
+            color: $white;
+          }
+
+          .arrow-off {
+            background-color: $header-grey;
+            color: $white;
+            opacity: .5;
+          }
+        }
+
+      }
+
+      .right-navigation {
+        display: flex;
+        align-items: center;
+
+        a { 
+          color: $nav-link-color; 
+          font-family: 'Baloo Tamma 2', cursive;
+        }
+
+        .cart-box {
+          .items {
+            color: $white;
+          }
+
+          .items-bg {
+            background-color: $red;
+            color: $white;
+          }
+
+          .cart-icon {
+            color: $header-grey;
+          }
+        }
+      }
+    }
+
+    .second-row {
+      display: flex;
+      justify-content: center;
+      background-color: $red;
+
+      a { color: $white;}
+    }
+  }
 }
 
 // MOBILE E TABLET
@@ -216,7 +293,7 @@ header {
           height: 70px;
         }
 
-        div {
+        .cart-box {
           .items-bg {
             position: fixed;
             border-radius: 30px;
@@ -361,14 +438,114 @@ header {
   }
 }
 
+// DESKTOP 
+@media only screen and (min-width: 901px) {
+  header {
+    .desktop-header {
+      .first-row {
+        width: 70vw; 
 
+        padding: 0px 16px;
+        margin: 0px auto;
 
-// // DESKTOP
-// @media only screen and (max-width: 900px) {
-//   header {
+        .logo {
+          height: 40px;
+        }
 
-//   }
-// }
+        .left-navigation,
+        .right-navigation {
+          a {
+            border-radius: 8px;
+            transition: all .5s ease;
+
+            font-size: 16px;
+            padding: 4px 16px 0px 16px;
+            margin: 16px 8px;
+
+            &:hover {
+              background-color: $red;
+              color: white;
+            }
+          }
+        }
+
+        .left-navigation {
+          .input-box {
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+
+            height: 28px;
+
+            padding: 8px 16px;
+            margin: 16px 16px;
+
+            .search-icon {
+              margin-right: 12px;
+            }
+
+            .arrow-icon {
+              border-radius: 20px;
+              font-size: 14px;
+
+              padding: 5px 10px;
+              margin-left: 12px;
+            }
+
+            input {
+              font-size: 16px;
+              // width: 80%;
+
+              &::placeholder {
+                opacity: .6;
+              }
+            }
+          }
+        }
+
+        .right-navigation {
+          .user-icon {
+            margin-left: 12px;
+          }
+
+          .cart-box {
+            &:hover {
+              cursor: pointer;
+            }
+
+            margin-left: 12px;
+
+            .items-bg {
+              position: fixed;
+              border-radius: 30px;
+              margin-top: -8px;
+              margin-left: 7px;
+
+              height: 20px;
+              width: 20px;
+            }
+
+            .items {
+              position: fixed;
+              margin-top: -8px;
+              margin-left: 11px;
+
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .second-row {
+        padding: 16px 0px;
+        a { 
+          font-size: 20px;
+          padding: 0px 16px; 
+        }
+      }
+    }
+  }
+}
 
 // ANIMATIONS
 // menu
