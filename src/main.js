@@ -33,7 +33,6 @@ import {
 
   faPlus,
   faMinus,
-  faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 

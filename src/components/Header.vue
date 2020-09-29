@@ -1,12 +1,44 @@
 <template lang="pug">
 header
   //- HEADER DESKTOP
-  .desktop-only
-    img(src="../assets/menu.svg")
+  div.desktop-only.desktop-header
+    div.first-row
+      img(src="../assets/logo.png")
+
+      //- left navigation
+      nav.left-navigation
+        router-link(to="/") HOME
+        router-link(to="/") CONTATO
+        router-link(to="/") PRODUTOS
+
+      //- search bar
+      div.input-box
+        fa-icon.search-icon(icon="search")
+        input(type="text" placeholder="Pesquisar")
+        fa-icon.arrow-icon(icon="arrow-right" :class="[isActive ? 'arrow-on' : 'arrow-off']")
+
+      //- right navigation
+      nav.right-navigation
+        router-link(to="/c") ENTRAR #[fa-icon.user-icon(icon="user-circle")]
+
+        //- cart
+        div
+          span.items-bg 
+          span.items {{ itemsCount }}
+          fa-icon.cart-icon(icon="shopping-cart")
+
+    div.second-row
+      nav.dropdown
+        router-link(to="/a") Corrida
+        router-link(to="/a") Social
+        router-link(to="/a") Trilhas
+        router-link(to="/a") Passeios
+        router-link(to="/a") Cadarços 
+        router-link(to="/a") Meias
 
   //- HEADER MOBILE
-  .mobile-only.mobile-header
-    .first-row
+  div.mobile-only.mobile-header
+    div.first-row
       //- menu
       img.menu-icon(src="../assets/menu.svg" @click="isMenuOpen = !isMenuOpen")
 
@@ -19,33 +51,34 @@ header
         span.items {{ itemsCount }}
         fa-icon.cart-icon(icon="shopping-cart")
 
-    .second-row
+    div.second-row
       //- search bar
-      .input-box
+      div.input-box
         fa-icon.search-icon(icon="search")
-        input(type="text" placeholder="Pesquisar")
-        fa-icon.arrow-icon(icon="arrow-right")
+        input(type="text" placeholder="Pesquisar" v-model="searchText" @focus="isActive = true" @blur="isActive = false")
+        fa-icon.arrow-icon(icon="arrow-right" :class="[isActive ? 'arrow-on' : 'arrow-off']" )
 
   //- MENU MOBILE
   transition(name="menu")
-    .mobile-only.mobile-menu(v-show="isMenuOpen")
-      .first-row
+    div.mobile-only.mobile-menu(v-show="isMenuOpen")
+      div.first-row
         //- logo
         img.logo(src="../assets/logo.png")
         fa-icon.back-icon(icon="arrow-left" @click="isMenuOpen = !isMenuOpen")
 
+      //- unique navigation
       nav
         router-link(to="/") HOME #[fa-icon.dropdown-icon(:icon="isDropdownOpen ? 'arrow-down' : 'arrow-up'" @click="isDropdownOpen = !isDropdownOpen")]
 
+        //- dropdown
         transition(name="dropdown")
-          div.dropdown(v-show="isDropdownOpen")
+          nav.dropdown(v-show="isDropdownOpen")
             router-link(to="/a") Corrida
             router-link(to="/a") Social
             router-link(to="/a") Trilhas
             router-link(to="/a") Passeios
-            router-link(to="/a") Cadarços
+            router-link(to="/a") Cadarços 
             router-link(to="/a") Meias
-
 
         router-link(to="/a") PRODUTOS
         router-link(to="/b") CONTATO
@@ -63,10 +96,12 @@ export default {
   data: () => {
     return {
       itemsCount: 12,
-      isMenuOpen: true,
-      isDropdownOpen: true
+      isMenuOpen: false,
+      isDropdownOpen: true,
+      isActive: false,
+      searchText: ''
     }
-  }
+  },
 };
 </script>
 
@@ -102,9 +137,15 @@ header {
         color: $header-grey;
       }
 
-      .arrow-icon {
+      .arrow-on {
         background-color: $black;
         color: $white;
+      }
+
+      .arrow-off {
+        background-color: $header-grey;
+        color: $white;
+        opacity: .5;
       }
 
       input {
@@ -155,7 +196,7 @@ header {
   }
 }
 
-// MOBILE
+// MOBILE E TABLET
 @media only screen and (max-width: 900px) {
   header {
     .mobile-header {
@@ -237,7 +278,6 @@ header {
       left: 0px;
 
       height: 100vh;
-      width: 80vw;
 
       .first-row {
         display: flex;
@@ -269,7 +309,6 @@ header {
         a {
           width: 100px;
           padding: 5px 16px 3px 16px;
-          margin-left: 10vw;
 
           .dropdown-icon,
           .user-icon {
@@ -296,12 +335,33 @@ header {
   }
 }
 
-// TABLET
-@media only screen and (min-width: 901px) {
+// MOBILE 
+@media only screen and (max-width: 720px) {
   header {
-    
+    .mobile-menu {
+      width: 80vw;
+
+      nav a {
+        margin-left: 10vw;
+      }
+    }
   }
 }
+
+// TABLET 
+@media only screen and (min-width: 721px) and (max-width: 900px){ 
+  header {
+    .mobile-menu {
+      width: 40vw;
+
+      nav a {
+        margin-left: 7vw;
+      }
+    }
+  }
+}
+
+
 
 // // DESKTOP
 // @media only screen and (max-width: 900px) {
@@ -311,6 +371,7 @@ header {
 // }
 
 // ANIMATIONS
+// menu
 .menu-enter-active, .menu-leave-active {
   transition: all .3s ease-in-out;
 }
@@ -318,6 +379,7 @@ header {
   transform: translateX(-80vw);
 }
 
+// dropdown
 .dropdown-enter-active, .dropdown-leave-active {
   transition: all .1s ease-in-out;
 }
