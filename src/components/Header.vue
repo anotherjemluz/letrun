@@ -24,7 +24,7 @@ header
         //- cart
         div.cart-box
           span.items-bg 
-          span.items {{ itemsCount }}
+          span.items {{ cartItems }}
           fa-icon.cart-icon(icon="shopping-cart")
 
     div.second-row
@@ -48,7 +48,7 @@ header
       //- cart
       div.cart-box
         span.items-bg 
-        span.items {{ itemsCount }}
+        span.items {{ cartItems }}
         fa-icon.cart-icon(icon="shopping-cart")
 
     div.second-row
@@ -91,17 +91,17 @@ header
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: "Header",
-  data: () => {
-    return {
-      itemsCount: 12,
-      isMenuOpen: false,
-      isDropdownOpen: true,
-      isActive: false,
-      searchText: ''
-    }
-  },
+  computed: mapState([
+    "cartItems",
+    "isMenuOpen",
+    "isDropdownOpen",
+    "isActive",
+    "searchText"
+  ]),
 };
 </script>
 

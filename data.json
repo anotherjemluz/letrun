@@ -1,0 +1,170 @@
+{
+  "brandList": [
+    {
+      "name": "Adidas",
+      "image": ""
+    },
+    {
+      "name": "Puma",
+      "image": ""
+    },
+    {
+      "name": "Rainha",
+      "image": ""
+    },
+    {
+      "name": "Olympikus",
+      "image": ""
+    }
+  ],
+  "nikeList": [
+    {
+      "name": "Nike BBW",
+      "desc": "Leve",
+      "payment": "Até 5x de R$19,09 sem juros",
+      "price": "99,90",
+      "rating": 44,
+      "image": ""
+    },
+    {
+      "name": "Nike 11&5",
+      "desc": "Com molas",
+      "payment": "Até 5x de R$ 79,09 sem juros",
+      "price": "399,90",
+      "rating": 16,
+      "image": ""
+    },
+    {
+      "name": "Tênis Nike",
+      "desc": "Infantil",
+      "payment": "Até 5x de R$ 39,09 sem juros",
+      "price": "199,90",
+      "rating": 85,
+      "image": ""
+    },
+    {
+      "name": "Nike Air Zoom",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 136,
+      "image": ""
+    },
+    {
+      "name": "Nike Legend",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 28,
+      "image": ""
+    },
+    {
+      "name": "Nike PG3",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 67,
+      "image": ""
+    }
+  ],
+  "friendList": [
+    {
+      "name": "Nike BBW",
+      "desc": "Leve",
+      "payment": "Até 5x de R$19,09 sem juros",
+      "price": "99,90",
+      "rating": 44,
+      "image": ""
+    },
+    {
+      "name": "Nike 11&5",
+      "desc": "Com molas",
+      "payment": "Até 5x de R$ 79,09 sem juros",
+      "price": "399,90",
+      "rating": 16,
+      "image": ""
+    },
+    {
+      "name": "Tênis Nike",
+      "desc": "Infantil",
+      "payment": "Até 5x de R$ 39,09 sem juros",
+      "price": "199,90",
+      "rating": 85,
+      "image": ""
+    },
+    {
+      "name": "Nike Air Zoom",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 136,
+      "image": ""
+    },
+    {
+      "name": "Nike Legend",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 28,
+      "image": ""
+    },
+    {
+      "name": "Nike PG3",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 67,
+      "image": ""
+    }
+  ],
+  "socialList": [
+    {
+      "name": "Nike BBW",
+      "desc": "Leve",
+      "payment": "Até 5x de R$19,09 sem juros",
+      "price": "99,90",
+      "rating": 44,
+      "image": ""
+    },
+    {
+      "name": "Nike 11&5",
+      "desc": "Com molas",
+      "payment": "Até 5x de R$ 79,09 sem juros",
+      "price": "399,90",
+      "rating": 16,
+      "image": ""
+    },
+    {
+      "name": "Tênis Nike",
+      "desc": "Infantil",
+      "payment": "Até 5x de R$ 39,09 sem juros",
+      "price": "199,90",
+      "rating": 85,
+      "image": ""
+    },
+    {
+      "name": "Nike Air Zoom",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 136,
+      "image": ""
+    },
+    {
+      "name": "Nike Legend",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 28,
+      "image": ""
+    },
+    {
+      "name": "Nike PG3",
+      "desc": "Masculino",
+      "payment": "Até 5x de R$ 159,09 sem juros",
+      "price": "799,90",
+      "rating": 67,
+      "image": ""
+    }
+  ]
+}
