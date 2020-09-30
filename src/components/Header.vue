@@ -95,13 +95,15 @@ import { mapState } from 'vuex';
 
 export default {
   name: "Header",
-  computed: mapState([
-    "cartItems",
-    "isMenuOpen",
-    "isDropdownOpen",
-    "isActive",
-    "searchText"
-  ]),
+  computed: mapState(["cartItems"]),
+  data: () => {
+    return {
+      isActive: false,
+      searchText: '',
+      isDropdownOpen: true,
+      isMenuOpen: false
+    }
+  }
 };
 </script>
 

@@ -31,6 +31,8 @@
 // Dancer Pro font
 @import url("https://use.typekit.net/bia7dqi.css");
 
+
+// CSS RESET
 * {
   padding: 0;
   margin: 0;
@@ -44,6 +46,11 @@ input {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
 }
 
 #app {

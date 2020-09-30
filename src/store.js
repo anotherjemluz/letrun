@@ -6,10 +6,6 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     cartItems: 12,
-    isMenuOpen: false,
-    isDropdownOpen: true,
-    isActive: false,
-    searchText: ''
   },
   mutations: {
     addToCart (state) {

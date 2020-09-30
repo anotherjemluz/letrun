@@ -19,6 +19,9 @@ import 'aos/dist/aos.css'
 import Toasted from 'vue-toasted'
 Vue.use(Toasted)
 
+import VueAgile from 'vue-agile'
+Vue.use(VueAgile)
+
 // FONTAWESOME ICONS 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -30,6 +33,8 @@ import {
   faArrowDown,
   faArrowUp,
   faUserCircle,
+  faAngleRight,
+  faAngleLeft,
 
   faPlus,
   faMinus,
@@ -49,7 +54,8 @@ library.add(
   faArrowDown,
   faArrowUp,
   faUserCircle,
-
+  faAngleRight,
+  faAngleLeft,
 
   faPlus,
   faMinus,
