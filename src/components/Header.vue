@@ -353,6 +353,8 @@ header {
 
     .mobile-menu {
       position: fixed;
+      z-index: 1;
+      
       top: 0px;
       left: 0px;
 
@@ -518,7 +520,7 @@ header {
             margin-left: 12px;
 
             .items-bg {
-              position: fixed;
+              position: absolute;
               border-radius: 30px;
               margin-top: -8px;
               margin-left: 7px;
@@ -528,7 +530,7 @@ header {
             }
 
             .items {
-              position: fixed;
+              position: absolute;
               margin-top: -8px;
               margin-left: 11px;
 

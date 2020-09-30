@@ -1,21 +1,33 @@
 <template lang="pug">
   section#banner
-    div.desktop-only.desktop-banner
-    div.mobile-only.mobile-banner
-      agile(ref="slider" fade="true" :navButtons="false" :autoplay="false" speed="1000" :dots="true")
-        div.slide.first-banner
+    agile(ref="slider" fade="true" :navButtons="false" :autoplay="false" speed="1000" :dots="true")
+      div.slide
+        div.first-banner
           div.text
             h1 Você com tudo!
             h4 Sapatênis Polowear
 
+          div.desktop-only.promo
+            h1 Lançamento
+            h1 2020
+
           img.marca-dagua(src="@/assets/marca-dagua.png")
 
-        div.slide
-          p tchau
+      div.slide
+        div.second-banner
+          div.text
+            h1 Você com tudo!
+            h4 Sapatênis Polowear
 
-      div.slide-btn
-        button.btn-prev-slide(@click="$refs.slider.goToNext()") #[fa-icon(class="slide-btn-icon" icon="angle-left")]
-        button.btn-next-slide(@click="$refs.slider.goToPrev()") #[fa-icon(class="slide-btn-icon" icon="angle-right")]
+          div.desktop-only.promo
+            h1 Lançamento
+            h1 2020
+
+          img.marca-dagua(src="@/assets/marca-dagua.png")
+
+    div.slide-btn
+      button.btn-prev-slide(@click="$refs.slider.goToNext()") #[fa-icon(class="slide-btn-icon" icon="angle-left")]
+      button.btn-next-slide(@click="$refs.slider.goToPrev()") #[fa-icon(class="slide-btn-icon" icon="angle-right")]
 
 </template>
 
@@ -30,37 +42,88 @@ export default {
 
 // GENERIC
 #banner {
-  .mobile-banner {
+  .first-banner {
+    background-image: url('../assets/banners/main-banner.jpg');
+  }
+
+  .second-banner {
+    background-image: url('../assets/banners/main-banner-yellow.jpg');
+  }
+
+  .first-banner,
+  .second-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 60%;
+
+    .text {
+      color: $white;
+      h4 { opacity: .8; }
+    }
+
+    .promo {
+      position: absolute;
+      border-radius: 10px;
+      background-color: $white;
+      color: #303030;
+    }
+
+    .marca-dagua {
+      position: absolute;
+      opacity: .6;
+    }
+  }
+
+  .second-banner {
+    .text {
+      color: #303030;
+    }
+  }
+
+  .agile__actions {
+    ul {
+      li {
+        button {
+          background-color: transparent;
+          border-radius: 10px;
+          border: 3px solid #303030;
+        }
+      }
+
+      .agile__dot--current button {
+        background-color: #303030;
+      }
+    }
+  }
+
+  .slide-btn {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .btn-prev-slide,
+    .btn-next-slide {
+      background-color: transparent;
+      color: #303030;
+    }
   }
 }
 
 // MOBILE E TABLET
 @media only screen and (max-width: 900px) {
-  #banner .mobile-banner {
-    .slide {
+  #banner {
+    .first-banner,
+    .second-banner {
       text-align: center;
 
       width: 100vw;
       height: 50vh;
-    }
-
-    .first-banner {
-      background-image: url('../assets/banners/main-banner.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
+      
       .text {
-        color: $white;
-        margin-top: 20px;
-
-        h4 { opacity: .8; }
+        padding-top: 30px;
       }
 
       .marca-dagua {
-        position: fixed;
-        opacity: .6;
-
         height: 30px;
 
         bottom: 15px;
@@ -76,17 +139,9 @@ export default {
         li {
           margin: 0px 5px;
           button {
-            background-color: transparent;
-            border-radius: 10px;
-            border: 3px solid #303030;
-
             height: 16px;
             width: 16px;
           }
-        }
-
-        .agile__dot--current button {
-          background-color: #303030;
         }
       }
     }
@@ -112,5 +167,100 @@ export default {
   }
 }
 
+// AJUSTE BANNER
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  #banner {
+    .second-banner {
+      .text {
+        position: absolute;
+        top: 30%;
+        left: 40px;
+      }
+    }
+  }
+}
+
+// DESKTOP
+@media only screen and (min-width: 901px) {
+  #banner {
+    .agile {
+      width: 100vw;
+      margin: 0px auto;
+    }
+
+    .first-banner,
+    .second-banner {
+      box-shadow: 0px 10px 40px 0px #00000050;
+      border-radius: 15px;
+
+      height: 60vh;
+      width: calc(100vw - 60px);
+
+      margin: 30px auto 50px auto;
+
+      .text {
+        position: absolute;
+        top: 40%;
+        left: 80px;
+      }
+
+      .promo {
+        position: absolute;
+        display: inline-block;
+
+        text-align: right;
+
+        top: 60px;
+        right: 50px;
+
+        padding: 10px 20px;
+      }
+
+      .marca-dagua {
+        height: 30px;
+
+        bottom: 70px;
+        right: 50px;
+      }
+    }
+
+    .agile__actions {
+      padding: 20px 0px 20px 0px;
+
+      ul {
+        position: absolute;
+        bottom: 50px;
+
+        li {
+          margin: 0px 5px;
+          button {
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+
+    .slide-btn {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      bottom: 70px;
+
+      margin: 0px 42vw;
+
+      .btn-prev-slide,
+      .btn-next-slide {
+        background-color: transparent;
+
+        font-size: 25px;
+
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
 
 </style>
