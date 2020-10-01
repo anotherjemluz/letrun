@@ -1,6 +1,6 @@
 <template lang="pug">
   section#banner
-    agile(ref="slider" fade="true" :navButtons="false" :autoplay="false" speed="1000" :dots="true")
+    agile(ref="slider" :fade="true" :navButtons="false" :autoplay="false" :speed="1000" :dots="true")
       div.slide
         div.first-banner
           div.text
