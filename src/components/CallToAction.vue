@@ -132,6 +132,12 @@ export default {
       }
 
     }
+
+    .hr-mob {
+      display: flex;
+      margin: 10px auto;
+      opacity: .6;
+    }
   }
 }
 
