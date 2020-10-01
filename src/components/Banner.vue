@@ -89,12 +89,12 @@ export default {
         button {
           background-color: transparent;
           border-radius: 10px;
-          border: 3px solid #303030;
+          border: 3px solid $almost-black;
         }
       }
 
       .agile__dot--current button {
-        background-color: #303030;
+        background-color: $almost-black;
       }
     }
   }

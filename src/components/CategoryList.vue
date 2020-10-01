@@ -37,7 +37,7 @@ export default {
 
 // GENERIC
 #CategoryList {
-  h1 { color: #303030;}
+  h1 { color: $almost-black;}
 
   ul {
     display: flex;
@@ -70,7 +70,7 @@ export default {
         border-radius: 30px;
       }
 
-      p { color: #303030; }
+      p { color: $almost-black; }
     }
   }
 }
