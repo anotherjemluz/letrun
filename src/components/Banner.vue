@@ -1,6 +1,6 @@
 <template lang="pug">
   section#banner
-    agile(ref="slider" :fade="true" :navButtons="false" :autoplay="false" :speed="1000" :dots="true")
+    agile(ref="slider" :fade="true" :navButtons="false" :autoplay="true" :speed="1000" :dots="true")
       div.slide
         div.first-banner
           div.text
@@ -28,6 +28,9 @@
     div.slide-btn
       button.btn-prev-slide(@click="$refs.slider.goToNext()") #[fa-icon(class="slide-btn-icon" icon="angle-left")]
       button.btn-next-slide(@click="$refs.slider.goToPrev()") #[fa-icon(class="slide-btn-icon" icon="angle-right")]
+
+    img.mobile-only.hr-mob(src="@/assets/hr-mob.png")
+    img.desktop-only.hr(src="@/assets/hr.png")
 
 </template>
 
@@ -163,6 +166,12 @@ export default {
         height: 20px;
         width: 20px;
       }
+    }
+
+    .hr-mob {
+      display: flex;
+      margin: 10px auto;
+      opacity: .6;
     }
   }
 }
