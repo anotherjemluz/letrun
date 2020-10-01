@@ -2,19 +2,23 @@
   "brandList": [
     {
       "name": "Adidas",
-      "image": "adidas.png"
+      "image": "adidas.png",
+      "url": "home"
     },
     {
       "name": "Puma",
-      "image": "puma.png"
+      "image": "puma.png",
+      "url": "home"
     },
     {
       "name": "Rainha",
-      "image": "rainha.png"
+      "image": "rainha.png",
+      "url": "home"
     },
     {
       "name": "Olympikus",
-      "image": "olympikus.png"
+      "image": "olympikus.png",
+      "url": "home"
     }
   ],
   "nikeList": [

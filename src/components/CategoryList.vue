@@ -1,27 +1,32 @@
 <template lang="pug">
   section#CategoryList
+    //- titulo
     h1 MARCAS FAMOSAS
 
+    //- LISTA DE MARCAS
     ul
-      li(v-for="brand in data.brandList")
+      li(v-for="brand in json" @click="goToCategory(brand.url)")
         img(:src="require('../assets/brands/' + brand.image)")
         p {{ brand.name }}
 
+      //- preenchimento para scroll no mobile
       div.mobile-only(style="width: 150px;")
-
-
-
 
 </template>
 
 <script>
-import json from '../../data.json'
+import { brandList } from '../../data.json'
 
 export default {
   name: 'CategoryList',
   data: () => {
     return {
-      data: json
+      json: brandList
+    }
+  },
+  methods: {
+    goToCategory(url) {
+      this.$router.push({ name: url }) 
     }
   }
 }
@@ -47,6 +52,14 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      &:hover {
+        cursor: pointer;
+
+        img {
+          box-shadow: 0px 0px 20px 0px #00000040;
+        }
+      }
 
       img {
         display: flex;
