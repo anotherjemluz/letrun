@@ -68,7 +68,7 @@ export default {
       position: absolute;
       border-radius: 10px;
       background-color: $white;
-      color: #303030;
+      color: $almost-black;
     }
 
     .marca-dagua {
@@ -79,7 +79,7 @@ export default {
 
   .second-banner {
     .text {
-      color: #303030;
+      color: $almost-black;
     }
   }
 
@@ -107,7 +107,7 @@ export default {
     .btn-prev-slide,
     .btn-next-slide {
       background-color: transparent;
-      color: #303030;
+      color: $almost-black;
     }
   }
 }

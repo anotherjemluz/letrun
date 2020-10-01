@@ -36,6 +36,8 @@
 * {
   padding: 0;
   margin: 0;
+
+  list-style: none;
 }
 
 input {
@@ -57,6 +59,8 @@ button {
   font-family: fp-dancer-pro, sans-serif;
   font-weight: 700;
   font-style: normal;
+
+  width: 100%;
 
   background-color: #f9f9f9;
 }
