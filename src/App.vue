@@ -55,12 +55,50 @@ button {
   outline: none;
 }
 
+  // scroll vertical
+ /* width */
+  ::-webkit-scrollbar  {
+    width: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 5px #FD2C2780;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb  {
+    background: #FD2C2780;
+    border-radius: 20px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FD2C27;
+  }
+
+  // scroll horizontal
+  /*  width */
+  ::-webkit-scrollbar:horizontal  {
+    width: 0px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track:horizontal  {
+    box-shadow: none;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb:horizontal  {
+    background: transparent;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:horizontal:hover {
+    background: transparent;
+  }
+
 #app {
   font-family: fp-dancer-pro, sans-serif;
   font-weight: 700;
   font-style: normal;
 
   width: 100%;
+  overflow-x: hidden;
 
   background-color: #f9f9f9;
 }
