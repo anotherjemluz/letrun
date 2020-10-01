@@ -17,6 +17,8 @@ header
           input(type="text" placeholder="Pesquisar" v-model="searchText" @focus="isActive = true" @blur="isActive = false")
           fa-icon.arrow-icon(icon="arrow-right" :class="[isActive ? 'arrow-on' : 'arrow-off']" )
 
+      img.desktop-only.hr-mini(src="@/assets/hr-mini.png")
+
       //- right navigation
       nav.right-navigation
         router-link(to="/c") ENTRAR #[fa-icon.user-icon(icon="user-circle")]
@@ -26,6 +28,8 @@ header
           span.items-bg 
           span.items {{ cartItems }}
           fa-icon.cart-icon(icon="shopping-cart")
+
+    img.desktop-only.hr(src="@/assets/hr.png")
 
     div.second-row
       nav.dropdown
@@ -297,7 +301,7 @@ header {
 
         .cart-box {
           .items-bg {
-            position: fixed;
+            position: absolute;
             border-radius: 30px;
             top: 30px;
             right: 25px;
@@ -307,7 +311,7 @@ header {
           }
 
           .items {
-            position: fixed;
+            position: absolute;
             top: 30px;
             right: 29px;
 
@@ -449,7 +453,7 @@ header {
       .first-row {
         width: 70vw; 
 
-        padding: 0px 16px;
+        padding: 24px 16px 12px 16px;
         margin: 0px auto;
 
         .logo {
@@ -464,7 +468,7 @@ header {
 
             font-size: 16px;
             padding: 4px 16px 0px 16px;
-            margin: 16px 8px;
+            margin: 0px 8px;
 
             &:hover {
               background-color: $red;
@@ -482,7 +486,7 @@ header {
             height: 28px;
 
             padding: 8px 16px;
-            margin: 16px 16px;
+            margin: 0px 16px;
 
             .search-icon {
               margin-right: 12px;
@@ -505,6 +509,11 @@ header {
               }
             }
           }
+        }
+
+        .hr-mini {
+          max-height: 60px;
+          opacity: .6;
         }
 
         .right-navigation {
@@ -538,6 +547,11 @@ header {
             }
           }
         }
+      }
+
+      .hr {
+        margin: 12px 0px;
+        opacity: .6;
       }
 
       .second-row {
