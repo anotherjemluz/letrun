@@ -238,7 +238,7 @@ export default {
 
       ul {
         position: absolute;
-        bottom: 50px;
+        bottom: 20px;
 
         li {
           margin: 0px 5px;
@@ -255,7 +255,7 @@ export default {
       justify-content: space-between;
       position: relative;
 
-      bottom: 70px;
+      bottom: 40px;
 
       margin: 0px 42vw;
 
