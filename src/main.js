@@ -35,6 +35,7 @@ import {
   faUserCircle,
   faAngleRight,
   faAngleLeft,
+  faPaperPlane,
 
   faPlus,
   faMinus,
@@ -56,6 +57,7 @@ library.add(
   faUserCircle,
   faAngleRight,
   faAngleLeft,
+  faPaperPlane,
 
   faPlus,
   faMinus,
