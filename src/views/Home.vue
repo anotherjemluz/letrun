@@ -4,6 +4,7 @@ div
   Banner
   CategoryList
   Alert
+  ProductList
   DualPromo
   CallToAction
   
@@ -14,6 +15,7 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import CategoryList from "../components/CategoryList";
 import Alert from "../components/Alert";
+import ProductList from "../components/ProductList";
 import DualPromo from "../components/DualPromo";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
@@ -25,6 +27,7 @@ export default {
     Banner,
     CategoryList,
     Alert,
+    ProductList,
     DualPromo,
     CallToAction,
     Footer,

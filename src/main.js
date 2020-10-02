@@ -22,6 +22,9 @@ Vue.use(Toasted)
 import VueAgile from 'vue-agile'
 Vue.use(VueAgile)
 
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
+
 // FONTAWESOME ICONS 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'

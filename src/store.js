@@ -13,7 +13,7 @@ export default new Vuex.Store({
     },
     removeFromCart (state) {
       state.cartItems--
-    }
+    },
   },
   actions: {
 
