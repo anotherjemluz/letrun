@@ -117,7 +117,7 @@ export default {
 @media only screen and (min-width: 901px) {
   #DualPromo {
     display: flex;
-    padding: 72px 48px;
+    padding: 48px 48px 72px 48px;
 
     .first-promo,
     .second-promo {
