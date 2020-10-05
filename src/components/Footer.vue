@@ -79,7 +79,12 @@ footer {
       align-items: center;
 
       .arrow-right {
-
+        opacity: .6;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          opacity: 1;
+        }
       }
     }
 
@@ -92,6 +97,15 @@ footer {
     .picpay {
       .arrow-right {
         color: #21C25E;
+      }
+    }
+
+    .cartoes,
+    .especie {
+      opacity: .6;
+      strong {
+        margin-right: 12px;
+        opacity: 1;
       }
     }
   }
@@ -117,7 +131,7 @@ footer {
     align-items: center;
       
     .certif {
-      img {
+      img { 
         border-radius: 20px;
       }
     }
@@ -141,14 +155,117 @@ footer {
 // MOBILE E TABLET
 @media only screen and (max-width: 900px) {
   footer {
+    padding: 64px 15vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
+    section {
+      h2 {
+        margin-bottom: 24px;
+      }
+    }
+
+    .payments {
+      margin-bottom: 64px;
+
+      div {
+        padding: 15px 20px 5px 20px;
+        margin: 10px 0px;
+
+        img {
+          height: 20px;
+        }
+      }
+      
+      .mercado-pago,
+      .picpay {
+        padding: 15px 20px 15px 20px;
+      }
+    }
+
+    .sitemap {
+      align-items: center;
+
+      margin-bottom: 64px;
+    }
+
+    .other {
+      h2 {
+        margin-bottom: 12px;
+      }
+
+      .certif {
+        margin-bottom: 24px;
+      }
+
+      .social {
+        .facebook-icon,
+        .instagram-icon,
+        .twitter-icon {
+          font-size: 1.8rem;
+
+          margin: 0px 10px;
+        }
+      }
+    }
   }
 }
 
 // DESKTOP 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 901px) and (max-width: 1599px)  {
   footer {
     padding: 64px 15vw;
+    justify-content: space-between;
+
+    section {
+      h2 {
+        margin-bottom: 24px;
+      }
+    }
+
+    .payments {
+      div {
+        padding: 15px 20px 5px 20px;
+        margin: 10px 0px;
+
+        img {
+          height: 20px;
+        }
+      }
+      
+      .mercado-pago,
+      .picpay {
+        padding: 15px 20px 15px 20px;
+      }
+    }
+
+    .other {
+      h2 {
+        margin-bottom: 12px;
+      }
+
+      .certif {
+        margin-bottom: 24px;
+      }
+
+      .social {
+        .facebook-icon,
+        .instagram-icon,
+        .twitter-icon {
+          font-size: 1.8rem;
+
+          margin: 0px 10px;
+        }
+      }
+    }
+  }
+}
+
+// FIX COLUMN 
+@media only screen and (min-width: 1600px) {
+  footer {
+    padding: 64px calc((100vw - 1200px) / 2);
     justify-content: space-between;
 
     section {

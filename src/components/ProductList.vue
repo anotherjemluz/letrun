@@ -179,7 +179,7 @@ export default {
       flex-grow: 1;
 
       margin: 15px;
-      padding: 0px 15px;
+      padding: 0px 15px 10px;
 
       max-width: calc(100vw / 3);
 
