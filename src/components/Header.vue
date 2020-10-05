@@ -279,7 +279,8 @@ header {
         opacity: .7;
         transition: all .5s ease;
 
-        &:hover {
+        &:hover,
+        &:focus {
           opacity: 1;
         }
       }
@@ -483,7 +484,8 @@ header {
             padding: 4px 16px 0px 16px;
             margin: 0px 8px;
 
-            &:hover {
+            &:hover,
+            &:focus {
               background-color: $red;
               color: white;
             }
@@ -535,7 +537,8 @@ header {
           }
 
           .cart-box {
-            &:hover {
+            &:hover,
+            &:focus {
               cursor: pointer;
             }
 

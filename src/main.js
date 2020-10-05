@@ -47,8 +47,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
-  faWhatsapp,
   faInstagram,
+  faFacebook, 
+  faTwitter
 } from '@fortawesome/free-brands-svg-icons'
 
 Vue.component('fa-icon', FontAwesomeIcon)
@@ -68,8 +69,9 @@ library.add(
 
   faPlus,
   faMinus,
-  faWhatsapp,
   faInstagram,
+  faFacebook,
+  faTwitter
 )
 
 new Vue({

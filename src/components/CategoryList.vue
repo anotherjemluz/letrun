@@ -53,7 +53,8 @@ export default {
       flex-direction: column;
       align-items: center;
 
-      &:hover {
+      &:hover,
+      &:focus {
         cursor: pointer;
 
         img {

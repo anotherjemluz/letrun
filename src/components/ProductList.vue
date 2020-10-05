@@ -83,7 +83,8 @@ export default {
     border-radius: 10px;
     transition: all .5s ease;
 
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: 0px 0px 10px 10px #00000020;
       cursor: pointer;
     }
@@ -140,7 +141,8 @@ export default {
     .btn-next {
       color: $almost-black;
 
-      &:hover {
+      &:hover,
+      &:focus {
         cursor: pointer;
       }
     }

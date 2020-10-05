@@ -70,7 +70,8 @@ export default {
         color: $white;
         transition: all .5s ease;
 
-        &:hover {
+        &:hover,
+        &:focus {
           cursor: pointer;
           background-color: $red;
         }

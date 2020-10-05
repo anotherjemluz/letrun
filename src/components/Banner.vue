@@ -109,7 +109,8 @@ export default {
       background-color: transparent;
       color: $almost-black;
 
-      &:hover {
+      &:hover,
+      &:focus {
         cursor: pointer;
       }
     }
