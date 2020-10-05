@@ -33,7 +33,7 @@ header
 
     div.second-row
       nav.dropdown
-        router-link(to="/a") Corrida
+        router-link.active(to="/a") Corrida
         router-link(to="/a") Social
         router-link(to="/a") Trilhas
         router-link(to="/a") Passeios
@@ -274,7 +274,19 @@ header {
       justify-content: center;
       background-color: $red;
 
-      a { color: $white;}
+      a { 
+        color: $white; 
+        opacity: .7;
+        transition: all .5s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .active {
+        opacity: 1;
+      }
     }
   }
 }
@@ -452,6 +464,7 @@ header {
     .desktop-header {
       .first-row {
         width: 70vw; 
+        max-width: 1100px;
 
         padding: 24px 16px 12px 16px;
         margin: 0px auto;
@@ -550,8 +563,10 @@ header {
       }
 
       .hr {
-        margin: 12px 0px;
+        display: flex;
+        margin: 12px auto;
         opacity: .6;
+
       }
 
       .second-row {
@@ -561,6 +576,21 @@ header {
           padding: 0px 16px; 
         }
       }
+    }
+  }
+}
+
+// FIX COLUMN 
+@media only screen and (min-width: 1600px) {
+  header {
+    .second-row {
+      max-width: 1600px;
+      border-radius: 50px;
+      margin: 0px auto;
+    }
+
+    .hr {
+      max-width: 1600px;
     }
   }
 }

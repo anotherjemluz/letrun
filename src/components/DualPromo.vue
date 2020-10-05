@@ -123,6 +123,7 @@ export default {
     .second-promo {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       border-radius: 10px;
       text-align: center;
       flex-grow: 1;
@@ -170,5 +171,15 @@ export default {
 
   }
 }
+
+// FIX COLUMN 
+@media only screen and (min-width: 1600px) {
+  #DualPromo {
+    margin: 0px auto;
+    width: 1600px;
+    height: 300px;
+  }
+}
+
 
 </style>

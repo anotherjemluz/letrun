@@ -59,4 +59,15 @@ export default {
     }
   }
 }
+
+// FIX COLUMN 
+@media only screen and (min-width: 1600px) {
+  #Alert {
+    // display: flex;
+    // fle
+    margin: 0px auto;
+    width: 1600px;
+  }
+}
+
 </style>

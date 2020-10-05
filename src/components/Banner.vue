@@ -108,6 +108,10 @@ export default {
     .btn-next-slide {
       background-color: transparent;
       color: $almost-black;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -190,10 +194,13 @@ export default {
 }
 
 // DESKTOP
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 901px) and (max-width: 1599px)  {
   #banner {
+    // max-width: 1200px;
+    
     .agile {
-      width: 100vw;
+      // width: 80%;
+      position: relative;
       margin: 0px auto;
     }
 
@@ -211,6 +218,8 @@ export default {
         position: absolute;
         top: 40%;
         left: 80px;
+
+        font-size: 2rem;
       }
 
       .promo {
@@ -223,6 +232,8 @@ export default {
         right: 50px;
 
         padding: 10px 20px;
+
+        font-size: 1.5rem;
       }
 
       .marca-dagua {
@@ -268,6 +279,105 @@ export default {
         height: 20px;
         width: 20px;
       }
+    }
+
+    .hr {
+      display: flex;
+      margin: 0px auto;
+    }
+  }
+}
+
+// FIX XOLUMN
+@media only screen and (min-width: 1600px) {
+  #banner {
+    .agile {
+      max-width: 1620px;
+      position: relative;
+      margin: 0px auto;
+    }
+
+    .first-banner,
+    .second-banner {
+      box-shadow: 0px 10px 40px 0px #00000050;
+      border-radius: 15px;
+
+      height: 60vh;
+      width: calc(1600px - 40px);
+
+      margin: 30px 30px 50px 30px;
+
+      .text {
+        position: absolute;
+        top: 40%;
+        left: 80px;
+
+        font-size: 2rem;
+      }
+
+      .promo {
+        position: absolute;
+        display: inline-block;
+
+        text-align: right;
+
+        top: 60px;
+        right: 50px;
+
+        padding: 10px 20px;
+
+        font-size: 1.5rem;
+      }
+
+      .marca-dagua {
+        height: 30px;
+
+        bottom: 70px;
+        right: 50px;
+      }
+    }
+
+    .agile__actions {
+      padding: 20px 0px 20px 0px;
+
+      ul {
+        position: absolute;
+        bottom: 20px;
+
+        li {
+          margin: 0px 5px;
+          button {
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+
+    .slide-btn {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      bottom: 40px;
+
+      margin: 0px 44vw;
+
+      .btn-prev-slide,
+      .btn-next-slide {
+        background-color: transparent;
+
+        font-size: 25px;
+
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    .hr {
+      display: flex;
+      margin: 0px auto;
+      max-width: 1600px;
     }
   }
 }

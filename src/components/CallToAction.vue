@@ -142,7 +142,7 @@ export default {
 }
 
 // DESKTOP 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 901px) and (max-width: 1599px) {
   #CTA {
     .cta-content {
       align-items: center;
@@ -191,4 +191,64 @@ export default {
     }
   }
 }
+
+// FIX COLUMN 
+@media only screen and (min-width: 1600px) {
+  #CTA {
+    margin: 0px auto;
+    max-width: 1600px;
+
+    .cta-content {
+      align-items: center;
+
+      .titulo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        border-radius: 50px 20px 20px 50px;
+        
+        max-width: calc(1600px * 0.8);
+        margin: 24px 24px 24px 0px;
+        padding: 20px 40px;
+
+        font-size: 14px;  
+
+        h1 {
+          text-align: right;
+          max-width: 60%;
+        }
+      }
+
+      .input-box {
+        
+        input {
+          border-radius: 10px 0px 0px 10px;
+          padding: 12px 24px 6px 24px;
+
+          font-size: 18px;
+        }
+
+        button {
+          border-radius: 0px 10px 10px 0px;
+
+          font-size: 16px;
+          padding: 10px 20px 5px 20px;
+        }
+      }
+
+      .fill {
+        border-radius: 20px 50px 50px 20px;
+        margin: 24px 0px 12px 24px;
+      }
+    }
+
+    .hr{
+      display: flex;
+      margin: 0px auto;
+      max-width: 1600px;
+    }
+  }
+}
+
 </style>

@@ -1,8 +1,10 @@
 <template lang="pug">
   section#ProductList
     //- titulo
-    h1(v-show="titleCenter") {{ title }}
-    h1(v-show="titleLeft" class="desktop-only") {{ title }}
+    h1.mobile-only {{ title }}
+
+    h1(v-show="titleCenter" class="desktop-only h1-center") {{ title }}
+    h1(v-show="titleLeft" class="desktop-only h1-left") {{ title }}
 
     //- LISTA DE PRODUTOS
     carousel(ref="carousel" :perPage="itemsPerPage" paginationColor="#77777750" @pageChange="setPageStatus")
@@ -17,6 +19,12 @@
 
         div.rating
           div.stars
+            fa-icon(class="star-icon" icon="star")
+            fa-icon(class="star-icon" icon="star")
+            fa-icon(class="star-icon" icon="star")
+            fa-icon(class="star-icon" icon="star")
+            fa-icon(class="star-icon" icon="star-half")
+            
 
           p.rating-number {{ product.rating }}
 
@@ -97,6 +105,24 @@ export default {
       border-radius: 5px;
       color: $white;
     }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .stars {
+        .star-icon {
+          color: $red;
+        }
+      }
+
+      .rating-number {
+        color: $grey;
+        opacity: .8;
+      }
+    }
+      
   }
 
   .carousel-btns {
@@ -132,10 +158,11 @@ export default {
 // MOBILE E TABLET
 @media only screen and (max-width: 900px) {
   #ProductList {
-    padding: 96px 0px 48px 0px;
+    padding: 72px 0px 48px 0px;
 
     h1 { 
       text-align: center; 
+      padding: 0px 36px;
     }
 
     .VueCarousel {
@@ -150,7 +177,7 @@ export default {
       flex-grow: 1;
 
       margin: 15px;
-      padding: 15px;
+      padding: 0px 15px;
 
       max-width: calc(100vw / 3);
 
@@ -169,11 +196,15 @@ export default {
         margin-bottom: 24px;
       }
 
+      .payment {
+        font-size: .9rem;
+      }
+
       .price {
         display: inline-block;
         text-align: center;
 
-        font-size: 22px;
+        font-size: 1rem;
 
         padding: 5px 10px 0px 10px;
         margin: 24px 0px 12px;
@@ -182,6 +213,20 @@ export default {
       .rating {
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        .stars {
+          margin-right: 6px;
+          .star-icon {
+            color: $red;
+            font-size: 12px;
+          }
+        }
+
+        .rating-number {
+          color: $grey;
+          font-size: 14px;
+        }
       }
     }
 
@@ -203,12 +248,14 @@ export default {
 }
 
 // DESKTOP 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 901px) and (max-width: 1599px) {
   #ProductList {
     padding: 96px 0px 48px 0px;
 
-    h1 { 
-      // text-align: center; 
+    .h1-center { text-align: center; }
+    .h1-left { 
+      text-align: left; 
+      padding-left: 200px;
     }
 
     .VueCarousel {
@@ -255,14 +302,103 @@ export default {
       }
 
       .rating {
-        display: flex;
-        justify-content: center;
+        .stars {
+          margin-right: 6px;
+          .star-icon {
+            font-size: 12px;
+          }
+        }
+
+        .rating-number {
+          font-size: 14px;
+        }
       }
     }
 
     .carousel-btns {
       width: 90vw;
       margin: -200px 5vw 0px 5vw;
+
+      .btn-prev, 
+      .btn-next {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+// FIX COLUMN 
+@media only screen and (min-width: 1600px) {
+  #ProductList {
+    padding: 96px 0px 48px 0px;
+
+    .h1-center { text-align: center; }
+    .h1-left { 
+      width: 1600px;
+      text-align: left; 
+      padding-left: calc(((100vw - 1600px) / 2) + 200px );
+    }
+
+    .VueCarousel {
+      max-width: calc(1600px * 0.8);
+      padding: 64px 48px 0px 48px;
+      margin: 0px auto;
+    }
+
+    .left { text-align: left; }
+
+    .slide {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      margin: 15px;
+      padding: 15px;
+
+      max-width: calc(100% / 10);
+
+      .photo {
+        width: 60%;
+        margin: 24px auto;
+      }
+
+      .name,
+      .desc,
+      .payment {
+        margin-left: 12px;
+      }
+
+      .desc {
+        margin-bottom: 24px;
+      }
+
+      .price {
+        display: inline-block;
+        text-align: center;
+
+        font-size: 1.3rem;
+
+        padding: 5px 10px 0px 10px;
+        margin: 24px 0px 12px;
+      }
+
+      .rating {
+        .stars {
+          margin-right: 6px;
+          .star-icon {
+            font-size: 12px;
+          }
+        }
+
+        .rating-number {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .carousel-btns {
+      width: calc(1600px * 0.9);
+      margin: -200px calc((100vw - (1600px * 0.9)) / 2) 0px calc((100vw - (1600px * 0.9)) / 2);
 
       .btn-prev, 
       .btn-next {
