@@ -221,9 +221,141 @@
       "rating": 67,
       "image": "friends6.png",
       "url": "home"
+    },
+    {
+      "name": "Nike BBW",
+      "desc": "Leve",
+      "payment1": "5x ",
+      "payment2": "19,09 ",
+      "payment3": "sem juros",
+      "price": "99,90",
+      "rating": 44,
+      "image": "friends1.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike 11&5",
+      "desc": "Com molas",
+      "payment1": "5x ",
+      "payment2": "79,09 ",
+      "payment3": "sem juros",
+      "price": "399,90",
+      "rating": 16,
+      "image": "friends2.png",
+      "url": "home"
+    },
+    {
+      "name": "Tênis Nike",
+      "desc": "Infantil",
+      "payment1": "5x ",
+      "payment2": "39,09 ",
+      "payment3": "sem juros",
+      "price": "199,90",
+      "rating": 85,
+      "image": "friends3.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike Air Zoom",
+      "desc": "Masculino",
+      "payment1": "5x ",
+      "payment2": "159,09 ",
+      "payment3": "sem juros",
+      "price": "799,90",
+      "rating": 136,
+      "image": "friends4.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike Legend",
+      "desc": "Masculino",
+      "payment1": "5x ",
+      "payment2": "159,09 ",
+      "payment3": "sem juros",
+      "price": "799,90",
+      "rating": 28,
+      "image": "friends5.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike PG3",
+      "desc": "Masculino",
+      "payment1": "5x ",
+      "payment2": "159,09 ",
+      "payment3": "sem juros",
+      "price": "799,90",
+      "rating": 67,
+      "image": "friends6.png",
+      "url": "home"
     }
   ],
   "socialList": [
+    {
+      "name": "Nike BBW",
+      "desc": "Leve",
+      "payment1": "5x ",
+      "payment2": "19,09 ",
+      "payment3": "sem juros",
+      "price": "99,90",
+      "rating": 44,
+      "image": "social1.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike 11&5",
+      "desc": "Com molas",
+      "payment1": "5x ",
+      "payment2": "79,09 ",
+      "payment3": "sem juros",
+      "price": "399,90",
+      "rating": 16,
+      "image": "social2.png",
+      "url": "home"
+    },
+    {
+      "name": "Tênis Nike",
+      "desc": "Infantil",
+      "payment1": "5x ",
+      "payment2": "39,09 ",
+      "payment3": "sem juros",
+      "price": "199,90",
+      "rating": 85,
+      "image": "social3.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike Air Zoom",
+      "desc": "Masculino",
+      "payment1": "5x ",
+      "payment2": "159,09 ",
+      "payment3": "sem juros",
+      "price": "799,90",
+      "rating": 136,
+      "image": "social4.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike Legend",
+      "desc": "Masculino",
+      "payment1": "5x ",
+      "payment2": "159,09 ",
+      "payment3": "sem juros",
+      "price": "799,90",
+      "rating": 28,
+      "image": "social5.png",
+      "url": "home"
+    },
+    {
+      "name": "Nike PG3",
+      "desc": "Masculino",
+      "payment1": "5x ",
+      "payment2": "159,09 ",
+      "payment3": "sem juros",
+      "price": "799,90",
+      "rating": 67,
+      "image": "social6.png",
+      "url": "home"
+    },
     {
       "name": "Nike BBW",
       "desc": "Leve",

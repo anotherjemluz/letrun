@@ -39,6 +39,8 @@ import {
   faAngleRight,
   faAngleLeft,
   faPaperPlane,
+  faStar,
+  faStarHalf,
 
   faPlus,
   faMinus,
@@ -61,6 +63,8 @@ library.add(
   faAngleRight,
   faAngleLeft,
   faPaperPlane,
+  faStar,
+  faStarHalf,
 
   faPlus,
   faMinus,

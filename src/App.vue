@@ -30,6 +30,9 @@
 
 // Dancer Pro font
 @import url("https://use.typekit.net/bia7dqi.css");
+// font-family: fp-dancer-pro, sans-serif;
+// font-style: normal;
+// font-weight: 300;
 
 
 // CSS RESET
