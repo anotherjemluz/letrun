@@ -41,9 +41,10 @@ import {
   faPaperPlane,
   faStar,
   faStarHalf,
+  faTimes,
 
   faPlus,
-  faMinus,
+  faMinus, 
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
@@ -66,6 +67,7 @@ library.add(
   faPaperPlane,
   faStar,
   faStarHalf,
+  faTimes,
 
   faPlus,
   faMinus,
