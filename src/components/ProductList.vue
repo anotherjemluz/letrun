@@ -802,6 +802,7 @@ export default {
 
           .colors {
             display: flex;
+            margin-top: 24px;
 
             div {
               height: 20px;
