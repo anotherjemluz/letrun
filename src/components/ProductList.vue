@@ -343,8 +343,8 @@ export default {
     }
 
     .close {
-      background-color: $black;
-      color: $white;
+      background-color: $white;
+      color: $black;
       border-radius: 20px;
       transition: all .5s ease;
       box-shadow: 0px 0px 0px 0px #00000000;
@@ -357,6 +357,7 @@ export default {
       &:hover {
         cursor: pointer;
         background-color: $red;
+        color: $white;
         box-shadow: 0px 0px 20px 10px #FD2C2750;
 
       }
@@ -472,6 +473,7 @@ export default {
           .photo {
             width: 100%;
             height: 100%;
+            padding: 0px 12px;
           }
 
           .colors {

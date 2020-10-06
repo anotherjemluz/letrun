@@ -317,7 +317,7 @@ header {
             position: absolute;
             border-radius: 30px;
             top: 30px;
-            right: 25px;
+            right: 23px;
 
             height: 20px;
             width: 20px;
@@ -548,7 +548,7 @@ header {
               position: absolute;
               border-radius: 30px;
               margin-top: -8px;
-              margin-left: 7px;
+              margin-left: 5px;
 
               height: 20px;
               width: 20px;
