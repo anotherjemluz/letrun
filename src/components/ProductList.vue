@@ -7,8 +7,8 @@
     h1(v-show="titleLeft" class="desktop-only h1-left") {{ title }}
 
     //- LISTA DE PRODUTOS
-    carousel(ref="carousel" :perPage="itemsPerPage" paginationColor="#77777750" @pageChange="setPageStatus")
-      slide(v-for="(product, index) in json" @click="goToProduct(product.url)" class="slide")
+    carousel(ref="carousel" :perPage="itemsPerPage" paginationColor="#77777750" @pageChange="setPageStatus" )
+      slide(v-for="(product, index) in json" class="slide" :id="product.id" @click="openModal()")
         img(:src="require('../assets/products/' + product.image)" class="photo")
 
         p.name {{ product.name }}
@@ -25,15 +25,48 @@
             fa-icon(class="star-icon" icon="star")
             fa-icon(class="star-icon" icon="star-half")
             
-
           p.rating-number {{ product.rating }}
 
+    //- CAROUSEL BUTTONS
     div.carousel-btns
       button(@click.prevent="prevSlide" :class="[pageStatus == 'firstPage' ? 'btn-off' : 'btn-on' ]" ) 
         fa-icon(class="btn-prev" icon="angle-left")
 
       button(@click.prevent="nextSlide" :class="[pageStatus == 'lastPage' ? 'btn-off' : 'btn-on' ]" ) 
         fa-icon(class="btn-next" icon="angle-right")
+
+    //- PRODUCT MODALS
+    div.modal(v-for="(product, index) in json" :id="'modal-'+ product.id" v-show="showModal === `modal-${product.id}`")
+      section.image-and-options
+        img(:src="require('../assets/products/' + product.image)" class="photo")
+
+      section.details
+        div.name-desc
+          p.name {{ product.name }}
+          p.desc {{ product.desc }}
+
+        div.price-many
+          div.first-row
+            p.price PREÇO
+            p.quantity QUANTIDADE
+
+          div.second-row
+            h1 R$ {{ product.price }}
+
+            div.set-quantity
+              fa-icon(class="btn-next" icon="angle-right")
+              p {{ quantity }}
+              fa-icon(class="btn-next" icon="angle-right")
+
+        div.longDesc
+          p {{ product.longDesc }}
+
+        div.add-to-cart
+          div.total
+            p Valor total
+            h3 {{ product.price * quantity }}
+
+          button.add-btn #[fa-icon(class="btn-next" icon="angle-right")] Adicionar ao carrinho
         
 </template>
 
@@ -43,7 +76,9 @@ export default {
   props: ['json', 'itemsPerPage', 'title', 'titleCenter', 'titleLeft'],
   data: () => {
     return {
-      pageStatus: 'firstPage'
+      pageStatus: 'firstPage',
+      quantity: 1,
+      showModal: ''
     }
   },
   methods: {
@@ -64,7 +99,14 @@ export default {
     },
     goToProduct(url) {
       this.$router.push({ name: url }) 
-    }
+    },
+    openModal() {
+      let id = event.path[10].activeElement.attributes.id.value
+      this.showModal = `modal-${id}`
+    },
+  },
+  created() {
+    document.addEventListener("click", this.openModal)
   }
 }
 </script>
@@ -154,6 +196,10 @@ export default {
     .btn-off {
       opacity: .3;
     }
+  }
+
+  .modal {
+
   }
 }
 
